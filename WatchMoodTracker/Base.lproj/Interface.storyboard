@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <button width="136" height="139" alignment="left" title="How are you feeling? " id="XCv-6k-txq">
+                            <connections>
+                                <segue destination="MF8-uM-bQs" kind="push" id="Z9V-ZR-7RQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+        <!--Mood Controller-->
+        <scene sceneID="0al-9B-l9C">
+            <objects>
+                <controller id="MF8-uM-bQs" customClass="MoodController" customModule="WatchMoodTracker_Extension">
+                    <items>
+                        <table alignment="left" id="sJO-hy-Cza">
+                            <items>
+                                <tableRow identifier="moodRow" id="CF5-NN-zz0" customClass="MoodRow" customModule="WatchMoodTracker_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Gg7-Pz-RVf">
+                                        <items>
+                                            <imageView width="35" alignment="left" contentMode="scaleAspectFit" id="FKB-wZ-l8s"/>
+                                            <label width="1" height="38" alignment="left" text="Label" textAlignment="left" id="EAO-Rv-00F"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="moodImg" destination="FKB-wZ-l8s" id="b4E-vp-IBX"/>
+                                        <outlet property="moodLabel" destination="EAO-Rv-00F" id="iBF-RL-EId"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="sJO-hy-Cza" id="glm-pD-vgM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="393" y="2"/>
+        </scene>
+    </scenes>
+</document>
